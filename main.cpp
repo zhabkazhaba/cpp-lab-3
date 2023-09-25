@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 void swap(int *a, int*b){
 	int temp = *a;
@@ -30,32 +29,22 @@ void quicksort(int array[], int start, int end){
 	}
 }
 
-void print_array(int array[], int length){
-	for (int i = 0; i <= length-1; i++){
-		cout << array[i] << "\t";
-	}
-}
-
 int main(){
 	int length;
-	cout << "Input length:"; cin >> length;
+	std::cout << "Input length:"; std::cin >> length;
 	int array[length];
-	cout << "Input KASHA portions:\n";
+	std::cout << "Input KASHA portions:\n";
 	for (int i = 0; i <= length-1; i++)
 	{
-		cin >> array[i];
+		std::cin >> array[i];
 	}
-	// cout << "Start array:\n";
-	// print_array(array, length);
 	quicksort(array, 0, length-1);
-	// cout << "\nSorted array:\n";
-	// print_array(array,length);
 	int min_dif = array[1] - array[0];
 	for (int i = 1; i <= length-1; i++){
 		if (min_dif > array[i] - array[i-1]){
 			min_dif = array[i] - array[i-1];
 		}
 	}
-	cout << "\nMin difference between KASHA portions:" << min_dif;
+	std::cout << "Min difference between KASHA portions:" << min_dif;
 	return 0;
 }
