@@ -31,15 +31,13 @@ void quicksort(int array[], int start, int end){
 
 int main(){
 	int length;
-	// std::cout << "Input length:"; std::cin >> length;
-	int array[32] = {509566391, 288831130, 705955723, 568149843, 715552798, 375579190, 153115961, 409783935, 11661308, 402389572, 518122104, 294256950, 690854883, 870104598, 494155609, 741518215, 928082887, 645809580, 244431276, 599352001, 1788721, 710088110, 670264952, 156017680, 472505234, 394766942, 174233214, 364728810, 972781081, 225755997, 63162138, 618705692};
-	// std::cout << "Input KASHA portions:\n";
-	//int array[6] = {5,2,2,4,8,9};
-	length = 32;
-	/*for (int i = 0; i <= length-1; i++)
+	std::cout << "Input length:"; std::cin >> length;
+	std::cout << "Input KASHA portions:\n";
+	int array[length];
+	for (int i = 0; i <= length-1; i++)
 	{
 		std::cin >> array[i];
-	} */
+	}
 	quicksort(array, 0, length-1);
 	long int accumulator = 0;
 	long int summ = 0;
