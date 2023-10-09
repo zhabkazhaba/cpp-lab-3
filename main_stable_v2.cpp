@@ -3,7 +3,7 @@
 #include <unordered_map>
 #include <vector>
 
-int simpleSearch(int *array, int i, int length, int sum1, int sum2, auto &table){
+int simpleSearch(int *array, int i, int length, int sum1, int sum2, auto &table){ // c++11 required!
 	if (i == length){
 				return abs(sum1-sum2);
 		}
@@ -18,7 +18,7 @@ int simpleSearch(int *array, int i, int length, int sum1, int sum2, auto &table)
 }
 
 int main(){
-	int length = 32;
+	int length;
 	std::cout << "Input length:"; std::cin >> length;
 	std::cout << "\nInput KASHA portions:\n";
 	int array[length];
